@@ -29,7 +29,7 @@ physics.addBody(suelo, "static", {density = 0.9, friction=0.1 ,bounce=0.8 } )
 
 for i = 1, 4 do
 
-local bloque = display.newImage( "cloud.png", ancho/4 + 50, centerX - 150 + 30 * i , 20, 30)
+local bloque = display.newImage( "Red_Brick_Block.png", ancho/4 + 50, centerX - 150 + 30 * i , 20, 30)
 
 physics.addBody( bloque, "dynamic", {density = 0.5, friction=0.20 ,bounce=0.5} )
 
@@ -37,6 +37,10 @@ end
 
 --plataforma1
 local plataforma = display.newRect( ancho/4, centerX, ancho/2, 10)
+
+physics.addBody (plataforma, "static", {density = 0.9, friction=0.1 ,bounce=0.8 })
+
+local plataforma = display.newRect( ancho/4, 415, ancho/2, 10)
 
 physics.addBody (plataforma, "static", {density = 0.9, friction=0.1 ,bounce=0.8 })
 
@@ -54,11 +58,15 @@ physics.addBody( pared, "static",  {density = 0.9, friction=0.1 ,bounce=0.8 } )
 
 for i = 0, 2 do
 
-local rect = display.newRect( 150, 370 + i * 20, 20, 20 )
+local rect = display.newImage( "Yellow Block.png", 150, 370 + i * 20, 20, 20 )
 physics.addBody( rect, "dynamic", {density = 0.9, friction=0.1 ,bounce=0.8 } )
 
 
 end
+
+
+
+local fondo = display.newImage( "nevado.png", {density = 0.9, friction=0.1 ,bounce=0.8 })
 
 
 
