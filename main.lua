@@ -18,7 +18,7 @@ physics.start( )
 
 
 
-local pelota = display.newImage( "Futbol.png", 65, 15 )
+local pelota = display.newImage( "StarCoin.png", 65, 15 )
 
 physics.addBody( pelota, "dynamic", {density = 0.9, friction=0.2 ,bounce=0.7 } )
 
@@ -35,16 +35,21 @@ physics.addBody( bloque, "dynamic", {density = 0.5, friction=0.20 ,bounce=0.5} )
 
 end
 
---plataforma1
-local plataforma = display.newRect( ancho/4, centerX, ancho/2, 10)
+
+
+for i = 1, 20 do
+
+
+
+local plataforma = display.newImage( "Yellow Block.png", ancho/4, centerX, ancho/2, 100)
 
 physics.addBody (plataforma, "static", {density = 0.9, friction=0.1 ,bounce=0.8 })
 
-local plataforma = display.newRect( ancho/4, 415, ancho/2, 10)
+local plataforma = display.newImage( "Yellow Block.png", ancho/4, 415, ancho/2, 10)
 
 physics.addBody (plataforma, "static", {density = 0.9, friction=0.1 ,bounce=0.8 })
 
-
+end
 
 
 
@@ -58,7 +63,7 @@ physics.addBody( pared, "static",  {density = 0.9, friction=0.1 ,bounce=0.8 } )
 
 for i = 0, 2 do
 
-local rect = display.newImage( "Yellow Block.png", 150, 370 + i * 20, 20, 20 )
+local rect = display.newImage( "Bloque inte.gif", 150, 370 + i * 20, 20, 20 )
 physics.addBody( rect, "dynamic", {density = 0.9, friction=0.1 ,bounce=0.8 } )
 
 
@@ -66,7 +71,7 @@ end
 
 
 
-local fondo = display.newImage( "nevado.png", {density = 0.9, friction=0.1 ,bounce=0.8 })
+
 
 
 
