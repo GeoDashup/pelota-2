@@ -37,19 +37,17 @@ end
 
 
 
-for i = 1, 20 do
 
-
-
-local plataforma = display.newImage( "Yellow Block.png", ancho/4, centerX, ancho/2, 100)
+--plataforma1
+local plataforma = display.newRect( ancho/4, centerX, ancho/2, 10)
 
 physics.addBody (plataforma, "static", {density = 0.9, friction=0.1 ,bounce=0.8 })
 
-local plataforma = display.newImage( "Yellow Block.png", ancho/4, 415, ancho/2, 10)
+local plataforma = display.newRect( ancho/4, 415, ancho/2, 10)
 
 physics.addBody (plataforma, "static", {density = 0.9, friction=0.1 ,bounce=0.8 })
 
-end
+
 
 
 
@@ -63,18 +61,11 @@ physics.addBody( pared, "static",  {density = 0.9, friction=0.1 ,bounce=0.8 } )
 
 for i = 0, 2 do
 
-local rect = display.newImage( "Bloque inte.gif", 150, 370 + i * 20, 20, 20 )
+local rect = display.newImage( "Bloque inte.gif", 10, 370 + i * 20, 20, 20 )
 physics.addBody( rect, "dynamic", {density = 0.9, friction=0.1 ,bounce=0.8 } )
 
 
 end
-
-
-
-
-
-
-
 
 
 
